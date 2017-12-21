@@ -96,12 +96,15 @@ namespace ICT13580030FinalA
 
         private void ChildrenEntry_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            childrenLabel.Text = e.NewValue.ToString("N0");
+            int value = (int)e.NewValue;
+            childrenLabel.Text = value.ToString();
         }
 
         private void SalaryEntry_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            salaryLabel.Text = e.NewValue.ToString("N0");
+            int value = (int)e.NewValue;
+            salaryLabel.Text = value.ToString();
+
         }
 
         void CancelButton_Clicked(object sender, EventArgs e)

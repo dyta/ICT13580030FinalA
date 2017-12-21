@@ -20,5 +20,15 @@ namespace ICT13580030FinalA
         {
             Navigation.PushModalAsync(new EmpNewPage());
         }
+        protected override void OnAppearing()
+        {
+            LoadData();
+        }
+
+        void LoadData()
+        {
+            empListView.ItemsSource = App.DbHelper.GetEmployees();
+        }
+        
     }
 }
