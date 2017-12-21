@@ -42,6 +42,7 @@ namespace ICT13580030FinalA.Models
 
         public int Children { get; set; }
         public int Salary { get; set; }
+        public Boolean Status { get; set; }
 
     }
 }
