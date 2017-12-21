@@ -21,20 +21,18 @@
                 <DataTemplate>
                     <ViewCell>
 
-                        <ViewCell.ContextActions>
-
+                        <TextCell.ContextActions>
                             <MenuItem
                                 Clicked="Edit_Clicked"
                                 CommandParameter="{Binding .}"
                                 Text="Edit" />
-
                             <MenuItem
                                 Clicked="Delete_Clicked"
                                 CommandParameter="{Binding .}"
                                 IsDestructive="True"
                                 Text="Delete" />
 
-                        </ViewCell.ContextActions>
+                        </TextCell.ContextActions>
 
                         <StackLayout Padding="10">
 

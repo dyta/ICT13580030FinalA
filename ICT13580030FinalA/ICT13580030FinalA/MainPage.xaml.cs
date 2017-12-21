@@ -29,6 +29,25 @@ namespace ICT13580030FinalA
         {
             empListView.ItemsSource = App.DbHelper.GetEmployees();
         }
-        
+        private void Edit_Clicked(object sender, EventArgs e)
+        {
+            var button = sender as MenuItem;
+            var product = button.CommandParameter as Employee;
+            Navigation.PushModalAsync(new EmpNewPage(product));
+        }
+        async void Delete_Clicked(object sender, EventArgs e)
+        {
+            var isOk = await DisplayAlert("ยืนยัน", "คุณต้องการลบใช่หรือไม่", "ใช่", "ไม่ใช่");
+            if (isOk)
+            {
+                var button = sender as MenuItem;
+                var product = button.CommandParameter as Employee;
+                App.DbHelper.DeleteEmployee(product);
+
+                await DisplayAlert("ลบสำเร็จ", "ลบข้อมูลสินค้าเรียบร้อย", "ตกลง");
+                LoadData();
+            }
+        }
+
     }
 }

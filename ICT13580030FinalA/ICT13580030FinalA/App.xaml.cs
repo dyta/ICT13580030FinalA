@@ -11,7 +11,6 @@ namespace ICT13580030FinalA
     public partial class App : Application
     {
         public static DbHelper DbHelper { get; set; }
-        public static object Dbhelper { get; internal set; }
 
         public App(String dbPath)
         {
