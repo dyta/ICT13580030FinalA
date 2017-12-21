@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ICT13580030FinalA.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,14 @@ namespace ICT13580030FinalA
 {
     public partial class App : Application
     {
-        public App()
+        public static DbHelper DbHelper { get; set; }
+        public static object Dbhelper { get; internal set; }
+
+        public App(String dbPath)
         {
             InitializeComponent();
-
-            MainPage = new ICT13580030FinalA.MainPage();
+            DbHelper = new DbHelper(dbPath);
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
