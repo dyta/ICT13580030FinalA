@@ -44,7 +44,7 @@ namespace ICT13580030FinalA
                 cellPhoneEntry.Text = employee.Telephone.ToString();
                 emailEntry.Text = employee.Email;
                 addressEditor.Text = employee.Address;
-                statusEntry.IsToggled = employee.Status;
+        
                 childrenLabel.Text = employee.Children.ToString();
                 salaryLabel.Text = employee.Salary.ToString();
             }
@@ -85,7 +85,7 @@ namespace ICT13580030FinalA
                     employee.Address = addressEditor.Text;
                     employee.Status = statusEntry.IsToggled;
                     employee.Children = int.Parse(childrenLabel.Text);
-                    employee.Salary = int.Parse(salaryLabel.Text);  
+                    employee.Salary = int.Parse(salaryLabel.Text);
 
                     var id = App.DbHelper.UpdateEmployee(employee);
                     await DisplayAlert("บันทึกสำเร็จ", "รหัสสินค้าของท่านคือ #" + id, "ตกลง");
