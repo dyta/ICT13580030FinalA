@@ -1,4 +1,4 @@
-﻿using ICT13580030FinalA.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using ICT13580030FinalA.Models;
 namespace ICT13580030FinalA
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]

@@ -12,7 +12,7 @@ namespace ICT13580030FinalA.Helpers
     {
         SQLiteConnection db;
 
-        public DbHelper(String dbPath)
+        public DbHelper(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
             db.CreateTable<Employee>();
